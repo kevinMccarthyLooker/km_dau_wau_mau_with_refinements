@@ -1,6 +1,7 @@
 view: dau_wau_mau_explore_to_be_extended {}#dummy base view
 explore: dau_wau_mau_explore_to_be_extended {
-  extension: required
+#   extension: required
+  hidden: yes
   join: dau_wau_mau_support {
     type: cross
     relationship: one_to_many
