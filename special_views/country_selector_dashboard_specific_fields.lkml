@@ -15,7 +15,10 @@ view: +events {
 ###Other Dimensions###
   #Note: Calculations like these that cross views are good to put in their own location so we can include them only when valid for the explore
   dimension: event_date_is_users_created_date{type: yesno sql: ${created_date}=${users.created_date} ;;}
-
+  #override country with custom formatting for this case. Don't need to re-declare sql, etc.
+  dimension: country {
+    html: @{highlight_cells_for_selected_country_html} ;;
+  }
 ###Measures###
   measure: first_day_events_count {hidden:yes label: "First Day Events Count"
     type: count
