@@ -8,5 +8,6 @@ include: "/**/*250.lkml"
 
 
 #explores defined in their own files and manifested in models by including them
-include: "/**/users.explore.lkml"
-explore: +users {}
+# include: "/**/users.explore.lkml"
+# explore: +users {}
+include: "/**/events.explore.lkml"
