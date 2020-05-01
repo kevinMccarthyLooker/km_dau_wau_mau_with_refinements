@@ -17,7 +17,7 @@ constant: globe_image {
 }
 
 constant: flags_dashboard_location {
-  value: "https://turtletown.dev.looker.com/dashboards/10"
+  value: "https://turtletown.dev.looker.com/embed/dashboards/10"
 }
 
 constant: highlight_cells_for_selected_country_html {
