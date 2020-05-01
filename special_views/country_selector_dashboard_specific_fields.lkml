@@ -24,12 +24,12 @@ view: +events {
   measure: first_day_events_count {hidden:yes label: "First Day Events Count"
     type: count
     filters: [event_date_is_users_created_date: "Yes"]
-    html: @{highlight_cells_for_selected_country_html} ;;
+    html: {% if _filters['events.country_selector'] == events.country._value %}<div style='background-color:lightgreen;font-weight:bold'>{{rendered_value}}</div>{%else%}<div>{{rendered_value}}</div>{%endif%} ;;
   }
   measure: returner_events_count {hidden:yes label: "Returner Events Count"
     type: count
     filters: [event_date_is_users_created_date: "No"]
-    html: @{highlight_cells_for_selected_country_html} ;;
+    html: {% if _filters['events.country_selector'] == events.country._value %}<div style='background-color:green;font-weight:bold;color:white'>{{rendered_value}}</div>{%else%}<div>{{rendered_value}}</div>{%endif%} ;;
   }
   measure: selected_country_first_day_events_count {hidden:yes
     label: "{%if selected_country_first_day_events_count._in_query%}{{_filters['country_selector']}} First Day Events{%else%}First Day Events for Selected Country{%endif%}"
