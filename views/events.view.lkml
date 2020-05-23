@@ -1,5 +1,3 @@
-
-
 view: events {
   sql_table_name: `lookerdata.thelook_event_extract_201701.events`
     ;;
