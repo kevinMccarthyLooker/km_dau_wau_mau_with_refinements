@@ -9,7 +9,7 @@ include: "/views/users.view.lkml"
 # include: "/dau_wau_mau_support.view"
 include: "//dau_wau_mau_support__remote_dependency/dau_wau_mau_support.view"
 view: +dau_wau_mau_support {
-  dimension: date_to_use__input_field {sql:${events.created_raw};;}
+  dimension: date_to_use__input_field {sql:${events.created_date};;}
   dimension: user_id__input_field {sql:${events.user_id};;}
 }
 
